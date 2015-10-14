@@ -1,0 +1,2 @@
+# ClassicDecoratorPattern
+Classic Decorator pattern 
