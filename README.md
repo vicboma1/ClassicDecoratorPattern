@@ -41,11 +41,7 @@ SoftBevel Border
 Tilted Border
 ```
 
+##[Video](https://youtu.be/n_T8R7E8sp8)
 
-![](http://i.imgur.com/ryCcj8y.png)
-
-
-![](http://i.imgur.com/b5THlNq.png)
-
-
-
+[![](http://i.imgur.com/ryCcj8y.png)](https://youtu.be/n_T8R7E8sp8)
+[![](http://i.imgur.com/b5THlNq.png)](https://youtu.be/n_T8R7E8sp8)
