@@ -31,113 +31,120 @@ public class ActionListDecorator {
         return this.listActions.get(index);
     }
 
+    public static final Color COLOR_FOREGROUND_LINE = new Color(158, 89, 0);
     private static List<ActionButton> _listActions = new ArrayList<ActionButton>() {
         {
-            add((button, index) -> {
-                lineBorder(button,index, new Color(4, 199, 216), 7, false);
-            });
-            add((button, index) -> {
-                tiledBorder(button,index, DECORATOR);
-            });
-            add((button, index) -> {
-                lineBorder(button,index, new Color(255, 182, 5), 4, true);
-            });
-            add((button, index) -> {
-                matterBorder(button,index, 9, 3, 1, 6, new Color(174, 2, 126));
-            });
-            add((button, index) -> {
-                sofBevelBorder(button,index);
-            });
-            add((button, index) -> {
-                lineBorder(button,index, Color.MAGENTA, 4, true);
-            });
-            add((button, index) -> {
-                matterBorder(button,index, 5, 7, 3, 1, new Color(212, 234, 13));
-            });
-            add((button, index) -> {
-                matterBorder(button,index, 2, 4, 6, 9, Color.blue);
-            });
-            add((button, index) -> {
-                bevelBorder(button,index, BevelBorder.LOWERED, Color.GREEN, Color.CYAN);
-            });
-            add((button, index) -> {
-                etchedBorder(button,index, EtchedBorder.LOWERED, Color.BLUE, Color.GREEN);
-            });
-            add((button, index) -> {
-                etchedBorder(button,index, EtchedBorder.RAISED, Color.BLACK, Color.YELLOW);
-            });
-            add((button, index) -> {
-                lineBorder(button,index, new Color(4, 199, 216), 7, false);
-            });
-            add((button, index) -> {
-                lineBorder(button,index, Color.MAGENTA, 4, true);
-            });
-            add((button, index) -> {
-                lineBorder(button,index, Color.RED, 4, true);
-            });
-            add((button, index) -> {
-                matterBorder(button,index, 2, 4, 6, 9, Color.blue);
-            });
-            add((button, index) -> {
-                bevelBorder(button,index, BevelBorder.RAISED, Color.YELLOW, Color.BLACK);
-            });
-            add((button, index) -> {
-                lineBorder(button, index, new Color(255, 182, 5), 4, true);
-            });
-            add((button, index) -> {
-                etchedBorder(button,index, EtchedBorder.LOWERED, new Color(15, 197, 112), new Color(84, 92, 110));
-            });
-            add((button, index) -> {
-                tiledBorder(button,index, DECORATOR);
-            });
-            add((button, index) -> {
-                matterBorder(button,index, 9, 3, 9, 1, new Color(164, 81, 165));
-            });
-            add((button, index) -> {
-                lineBorder(button,index, new Color(0, 255, 134), 7, false);
-            });
-            add((button, index) -> {
-                matterBorder(button,index, 5, 7, 3, 1, new Color(212, 234, 13));
-            });
-            add((button, index) -> {
-                matterBorder(button, index, 2, 9, 1, 9, new Color(143, 35, 255));
-            });
-            add((button, index) -> {
-                compouserBorder(button);
-            });
+            add((button, index) ->
+                            lineBorder(button, index, new Color(4, 199, 216), 7, false)
+            );
+            add((button, index) ->
+                            tiledBorder(button, index, DECORATOR)
+            );
+            add((button, index) ->
+                lineBorder(button, index, new Color(255, 182, 5), 4, true)
+            );
+            add((button, index) ->
+                matterBorder(button, index, 9, 3, 1, 6, new Color(174, 2, 126))
+            );
+            add((button, index) ->
+                sofBevelBorder(button, index)
+            );
+            add((button, index) ->
+                lineBorder(button, index, Color.MAGENTA, 4, true)
+            );
+            add((button, index) ->
+                matterBorder(button, index, 5, 7, 3, 1, new Color(212, 234, 13))
+            );
+            add((button, index) ->
+                matterBorder(button, index, 2, 4, 6, 9, Color.blue)
+            );
+            add((button, index) ->
+                bevelBorder(button, index, BevelBorder.LOWERED, Color.GREEN, Color.CYAN)
+            );
+            add((button, index) ->
+                etchedBorder(button, index, EtchedBorder.LOWERED, Color.BLUE, Color.GREEN)
+            );
+            add((button, index) ->
+                etchedBorder(button, index, EtchedBorder.RAISED, Color.BLACK, Color.YELLOW)
+            );
+            add((button, index) ->
+                lineBorder(button, index, new Color(4, 199, 216), 7, false)
+            );
+            add((button, index) ->
+                lineBorder(button, index, Color.MAGENTA, 4, true)
+            );
+            add((button, index) ->
+                lineBorder(button, index, Color.RED, 4, true)
+            );
+            add((button, index) ->
+                matterBorder(button, index, 2, 4, 6, 9, Color.blue)
+            );
+            add((button, index) ->
+                bevelBorder(button, index, BevelBorder.RAISED, Color.YELLOW, Color.BLACK)
+            );
+            add((button, index) ->
+                lineBorder(button, index, new Color(255, 182, 5), 4, true)
+            );
+            add((button, index) ->
+                etchedBorder(button, index, EtchedBorder.LOWERED, new Color(15, 197, 112), new Color(84, 92, 110))
+            );
+            add((button, index) ->
+                tiledBorder(button, index, DECORATOR)
+            );
+            add((button, index) ->
+                matterBorder(button, index, 9, 3, 9, 1, new Color(164, 81, 165))
+            );
+            add((button, index) ->
+                lineBorder(button, index, new Color(0, 255, 134), 7, false)
+            );
+            add((button, index) ->
+                matterBorder(button, index, 5, 7, 3, 1, new Color(212, 234, 13))
+            );
+            add((button, index) ->
+                matterBorder(button, index, 2, 9, 1, 9, new Color(143, 35, 255))
+            );
+            add((button, index) ->
+                compouserBorder(button)
+            );
         }
 
-        private void etchedBorder(JButton button,int index, int lowered, Color blue, Color green) {
+        private JButton etchedBorder(JButton button, int index, int lowered, Color blue, Color green) {
             EtchedBorderDecorator.create(button).border(lowered, blue, green);
-            actionListener(button,index,new Color(54, 156, 138));
+            actionListener(button, index, new Color(54, 156, 138));
+            return button;
         }
 
-        private void lineBorder(JButton button,int index, Color color, int thickness, boolean isRounder) {
+        private JButton lineBorder(JButton button, int index, Color color, int thickness, boolean isRounder) {
             LineBorderDecorator.create(button).border(color, thickness, isRounder);
-            actionListener(button, index, new Color(158, 89, 0));
+            actionListener(button, index, COLOR_FOREGROUND_LINE);
+            return button;
         }
 
-        private void sofBevelBorder(JButton button, int index) {
+        private JButton sofBevelBorder(JButton button, int index) {
             SofBevelBorderDecorator.create(button).border(BevelBorder.LOWERED, Color.BLUE, Color.RED);
             actionListener(button, index, new Color(7, 145, 44));
+            return button;
         }
 
-        private void bevelBorder(JButton button,int index, int raised, Color yellow, Color black) {
+        private JButton bevelBorder(JButton button, int index, int raised, Color yellow, Color black) {
             BevelBorderDecorator.create(button).border(raised, yellow, black);
             actionListener(button, index, new Color(146, 106, 163));
+            return button;
         }
 
-        private void matterBorder(JButton button,int index, int top, int left, int bottom, int right, Color matteColor) {
+        private JButton matterBorder(JButton button, int index, int top, int left, int bottom, int right, Color matteColor) {
             MatteBorderDecorator.create(button).border(top, left, bottom, right, matteColor);
             actionListener(button, index, new Color(186, 82, 83));
+            return button;
         }
 
-        private void tiledBorder(JButton button, int index, String titled) {
+        private JButton tiledBorder(JButton button, int index, String titled) {
             TitledBorderDecorator.create(button).border(titled);
             actionListener(button, index, new Color(255, 71, 197));
+            return button;
         }
 
-        private void compouserBorder(JButton button) {
+        private JButton compouserBorder(JButton button) {
             Border redBorder = BorderFactory.createLineBorder(Color.RED, 2);
             Border orangeBorder = BorderFactory.createLineBorder(Color.BLUE, 2);
             Border yellowBorder = BorderFactory.createLineBorder(Color.YELLOW, 5);
@@ -153,9 +160,10 @@ public class ActionListDecorator {
             Border sevenCompouser = new CompoundBorder(matteBorder, sixColorBorder);
             TitledBorderDecorator.create(button).border(DECORATOR);
             CompoundBorderDecorator.create(button).border(sevenCompouser);
+            return button;
         }
 
-        private void actionListener(JButton button, final int index, Color colorForeground ) {
+        private void actionListener(JButton button, final int index, Color colorForeground) {
             ActionListenerDecorator.create(button).actionListener(e -> {
                 button.setText(HTML_CENTER_BUTTON + index + PRESSED_BR_CHANGED_MY_FOREGROUND_COLOR_CENTER_HTML);
                 button.setForeground(colorForeground);
