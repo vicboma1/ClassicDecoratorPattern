@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
 
@@ -46,11 +47,12 @@ public class EtchedBorderDecoratorTest {
         etchedBorderDecorator.border(borderStyle, upper, lower);
         final EtchedBorder etchedBorder = new EtchedBorder(borderStyle, upper, lower);
 
-        assertEquals(button.getBorder().getClass(), etchedBorder.getClass());
-        assertEquals(((EtchedBorder)button.getBorder()).getEtchType(), etchedBorder.getEtchType());
-        assertEquals(((EtchedBorder)button.getBorder()).getHighlightColor(), etchedBorder.getHighlightColor());
-        assertEquals(((EtchedBorder)button.getBorder()).getShadowColor(), etchedBorder.getShadowColor());
-        assertEquals((button.getBorder()).isBorderOpaque(), etchedBorder.isBorderOpaque());
+        final Border border = button.getBorder();
+        assertEquals(border.getClass(), etchedBorder.getClass());
+        assertEquals(((EtchedBorder) border).getEtchType(), etchedBorder.getEtchType());
+        assertEquals(((EtchedBorder) border).getHighlightColor(), etchedBorder.getHighlightColor());
+        assertEquals(((EtchedBorder) border).getShadowColor(), etchedBorder.getShadowColor());
+        assertEquals(border.isBorderOpaque(), etchedBorder.isBorderOpaque());
 
     }
 
