@@ -4,9 +4,27 @@
 ## Agile Software Development
 
 ```
-KISS Principle - Keep it simple, stupid.
-DRY Principle - Don’t Repeat Yourself
+KISS principle - Keep it simple, stupid.
+DRY principle - Don’t Repeat Yourself.
+YAGNI princliple - Do the Simplest Thing That Could Possibly Work
+Single responsibility principle.
+Interface segregation principle.
+Liskov substitution principle.
 ```
+
+###Test-Driven Development (TDD)
+```
+JUnit 4.11
+Junit-theories 4.12
+Mockito-all 1.9.5
+```
+
+### Design Patterns Used
+```
+Factory Method Pattern
+Commander Pattern
+```
+
 
 ![](http://i.imgur.com/ryCcj8y.png)
 
