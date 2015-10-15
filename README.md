@@ -27,7 +27,7 @@ Factory Method Pattern
 Commander Pattern
 ```
 
-### Decorated properties
+### Decorated properties for JButton (JComponent)
 ```
 Text
 Size
