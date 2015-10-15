@@ -30,3 +30,7 @@ Commander Pattern
 
 
 ![](http://i.imgur.com/b5THlNq.png)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/classicdecoratorpattern/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
