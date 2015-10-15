@@ -27,6 +27,20 @@ Factory Method Pattern
 Commander Pattern
 ```
 
+### Decorated properties
+```
+Text
+Size
+Action Listener on Click
+Bevel Border
+Bevel Border
+Bevel Border
+Bevel Border
+Bevel Border
+Bevel Border
+Bevel Border
+```
+
 
 ![](http://i.imgur.com/ryCcj8y.png)
 
