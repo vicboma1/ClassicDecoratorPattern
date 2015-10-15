@@ -33,12 +33,12 @@ Text
 Size
 Action Listener on Click
 Bevel Border
-Bevel Border
-Bevel Border
-Bevel Border
-Bevel Border
-Bevel Border
-Bevel Border
+Compound Border
+Etched Border
+Liner Border
+Matte Border
+SoftBevel Border
+Tilted Border
 ```
 
 
