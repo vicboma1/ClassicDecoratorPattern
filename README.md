@@ -1,6 +1,10 @@
 # Classic Decorator Pattern  (WIP)
 ===================
 
+
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/classicdecoratorpattern/trend.png)](https://bitdeli.com/free "Bitdeli Badge")[![Analytics](https://ga-beacon.appspot.com/UA-68658653-1/classicdecoratorpattern/readme)](https://github.com/igrigorik/ga-beacon)
+
 ## Agile Software Development
 
 ```
@@ -32,5 +36,4 @@ Commander Pattern
 ![](http://i.imgur.com/b5THlNq.png)
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vicboma1/classicdecoratorpattern/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
