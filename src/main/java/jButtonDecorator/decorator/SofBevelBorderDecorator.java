@@ -19,7 +19,7 @@ public class SofBevelBorderDecorator extends JButtonDecoratorImpl {
         super(abstractButton);
     }
 
-    public SofBevelBorderDecorator border(final int border,final Color upper,final Color lower) {
+    public SofBevelBorderDecorator set(final int border, final Color upper, final Color lower) {
         abstractButton.setBorder(new SoftBevelBorder(border,upper,lower));
         return this;
     }

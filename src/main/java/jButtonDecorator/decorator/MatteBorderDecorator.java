@@ -19,7 +19,7 @@ public class MatteBorderDecorator extends JButtonDecoratorImpl {
         super(abstractButton);
     }
 
-    public MatteBorderDecorator border(final int top,final int left, final int bottom,final  int right,final  Color matteColor) {
+    public MatteBorderDecorator set(final int top, final int left, final int bottom, final int right, final Color matteColor) {
         abstractButton.setBorder(new MatteBorder(top, left, bottom, right, matteColor));
         return this;
     }

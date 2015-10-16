@@ -18,7 +18,7 @@ public class ActionListenerDecorator extends JButtonDecoratorImpl{
         super(abstractButton);
     }
 
-    public ActionListenerDecorator actionListener(final ActionListener action) {
+    public ActionListenerDecorator set(final ActionListener action) {
         abstractButton.addActionListener(action);
         return this;
     }

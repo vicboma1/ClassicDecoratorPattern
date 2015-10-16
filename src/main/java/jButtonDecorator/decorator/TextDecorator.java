@@ -17,7 +17,7 @@ public class TextDecorator extends JButtonDecoratorImpl{
         super(abstractButton);
     }
 
-    public TextDecorator text(String text) {
+    public TextDecorator set(String text) {
         this.abstractButton.setText(text);
         return this;
     }

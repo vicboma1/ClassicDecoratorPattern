@@ -109,37 +109,37 @@ public class ActionListDecorator {
         }
 
         private JButton etchedBorder(JButton button, int index, int lowered, Color blue, Color green) {
-            EtchedBorderDecorator.create(button).border(lowered, blue, green);
+            EtchedBorderDecorator.create(button).set(lowered, blue, green);
             actionListener(button, index, new Color(54, 156, 138));
             return button;
         }
 
         private JButton lineBorder(JButton button, int index, Color color, int thickness, boolean isRounder) {
-            LineBorderDecorator.create(button).border(color, thickness, isRounder);
+            LineBorderDecorator.create(button).set(color, thickness, isRounder);
             actionListener(button, index, COLOR_FOREGROUND_LINE);
             return button;
         }
 
         private JButton sofBevelBorder(JButton button, int index) {
-            SofBevelBorderDecorator.create(button).border(BevelBorder.LOWERED, Color.BLUE, Color.RED);
+            SofBevelBorderDecorator.create(button).set(BevelBorder.LOWERED, Color.BLUE, Color.RED);
             actionListener(button, index, new Color(7, 145, 44));
             return button;
         }
 
         private JButton bevelBorder(JButton button, int index, int raised, Color yellow, Color black) {
-            BevelBorderDecorator.create(button).border(raised, yellow, black);
+            BevelBorderDecorator.create(button).set(raised, yellow, black);
             actionListener(button, index, new Color(146, 106, 163));
             return button;
         }
 
         private JButton matterBorder(JButton button, int index, int top, int left, int bottom, int right, Color matteColor) {
-            MatteBorderDecorator.create(button).border(top, left, bottom, right, matteColor);
+            MatteBorderDecorator.create(button).set(top, left, bottom, right, matteColor);
             actionListener(button, index, new Color(186, 82, 83));
             return button;
         }
 
         private JButton tiledBorder(JButton button, int index, String titled) {
-            TitledBorderDecorator.create(button).border(titled);
+            TitledBorderDecorator.create(button).set(titled);
             actionListener(button, index, new Color(255, 71, 197));
             return button;
         }
@@ -158,15 +158,15 @@ public class ActionListDecorator {
             Border fiveColorBorder = new CompoundBorder(fourColorBorder, orangeBorder);
             Border sixColorBorder = new CompoundBorder(fiveColorBorder, redBorder);
             Border sevenCompouser = new CompoundBorder(matteBorder, sixColorBorder);
-            TitledBorderDecorator.create(button).border(DECORATOR);
-            CompoundBorderDecorator.create(button).border(sevenCompouser);
+            TitledBorderDecorator.create(button).set(DECORATOR);
+            CompoundBorderDecorator.create(button).set(sevenCompouser);
             return button;
         }
 
         private void actionListener(JButton button, final int index, Color colorForeground) {
-            ActionListenerDecorator.create(button).actionListener(e -> {
-                button.setText(HTML_CENTER_BUTTON + index + PRESSED_BR_CHANGED_MY_FOREGROUND_COLOR_CENTER_HTML);
-                button.setForeground(colorForeground);
+            ActionListenerDecorator.create(button).set(e -> {
+                TextDecorator.create(button).set(HTML_CENTER_BUTTON + index + PRESSED_BR_CHANGED_MY_FOREGROUND_COLOR_CENTER_HTML);
+                ForegroundDecorator.create(button).set(colorForeground);
             });
         }
     };

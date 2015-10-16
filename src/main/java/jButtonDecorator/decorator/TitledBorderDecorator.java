@@ -18,7 +18,7 @@ public class TitledBorderDecorator extends JButtonDecoratorImpl {
         super(abstractButton);
     }
 
-    public TitledBorderDecorator border(String title) {
+    public TitledBorderDecorator set(String title) {
         abstractButton.setBorder(new TitledBorder(title));
         return this;
     }

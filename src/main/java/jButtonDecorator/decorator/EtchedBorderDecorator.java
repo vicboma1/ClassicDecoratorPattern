@@ -19,7 +19,7 @@ public class EtchedBorderDecorator extends JButtonDecoratorImpl {
         super(abstractButton);
     }
 
-    public EtchedBorderDecorator border(final int border, final Color upper, final Color lower) {
+    public EtchedBorderDecorator set(final int border, final Color upper, final Color lower) {
         abstractButton.setBorder(new EtchedBorder(border,upper,lower));
         return this;
     }

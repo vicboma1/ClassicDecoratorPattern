@@ -19,7 +19,7 @@ public class LineBorderDecorator extends JButtonDecoratorImpl {
         super(abstractButton);
     }
 
-    public LineBorderDecorator border(final Color color,final int thickness, final boolean isRounder) {
+    public LineBorderDecorator set(final Color color, final int thickness, final boolean isRounder) {
         abstractButton.setBorder(new LineBorder(color, thickness, isRounder));
         return this;
     }

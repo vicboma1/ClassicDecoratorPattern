@@ -19,7 +19,7 @@ public class CompoundBorderDecorator extends JButtonDecoratorImpl {
         super(abstractButton);
     }
 
-    public CompoundBorderDecorator border(final Border border2) {
+    public CompoundBorderDecorator set(final Border border2) {
         abstractButton.setBorder(new CompoundBorder(abstractButton.getBorder(),border2));
         return this;
     }

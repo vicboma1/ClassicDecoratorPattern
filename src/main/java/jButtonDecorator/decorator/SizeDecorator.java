@@ -18,7 +18,7 @@ public class SizeDecorator extends JButtonDecoratorImpl{
         super(abstractButton);
     }
 
-    public SizeDecorator size(final int w,final int h) {
+    public SizeDecorator set(final int w, final int h) {
         final Dimension preferredSize = new Dimension(w, h);
         abstractButton.setPreferredSize(preferredSize);
         return this;
