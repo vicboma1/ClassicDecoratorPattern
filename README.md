@@ -46,3 +46,8 @@ Tilted Border
 
 [![](http://i.imgur.com/ryCcj8y.png)](https://youtu.be/n_T8R7E8sp8)
 [![](http://i.imgur.com/b5THlNq.png)](https://youtu.be/n_T8R7E8sp8)
+
+
+#References :
+
+* DecoratedCommand - http://martinfowler.com/bliki/DecoratedCommand.html
