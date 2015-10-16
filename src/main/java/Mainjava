@@ -1,0 +1,85 @@
+package noCompile;
+
+import jButtonAction.ActionButton;
+import jButtonAction.ActionListDecorator;
+import jButtonDecorator.decorator.SizeDecorator;
+import jButtonDecorator.decorator.TextDecorator;
+import window.display.Display;
+import window.listener.WindowAdapterBase;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.stream.IntStream;
+
+/**
+ * Created by vicboma on 14/10/15.
+ */
+public class Main {
+
+    public static final int W = 190;
+    public static final int H = 180;
+    public static final String BUTTON = "Button ";
+    public static final int START_INCLUSIVE = 0;
+    public static final int END_EXCLUSIVE = 24;
+    public static final int MILLIS = 200;
+    public static final long DELAY = 0L;
+
+    public Main() {
+    }
+
+    public static void main(String args[]) {
+        EventQueue.invokeLater(() -> {
+
+            final JPanel jpanel = new JPanel();
+            final WindowAdapterBase windowAdapterBase = WindowAdapterBase.create();
+            final JFrame frame = new JFrame(Display.DECORATOR_PATTERN);
+            final Display display = Display.create(frame, jpanel, windowAdapterBase);
+
+            final ActionListDecorator actionListDecorator = ActionListDecorator.create();
+            final Timer timer = new Timer();
+
+            execute(display, actionListDecorator,timer);
+        });
+
+    }
+
+    private static void execute(final Display display, final ActionListDecorator actionListDecorator, final Timer timer) {
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                IntStream
+                     .range(START_INCLUSIVE, END_EXCLUSIVE)
+                     .boxed()
+                     .forEach(i -> {
+                         runDecorator(i);
+                     });
+            }
+
+            private void runDecorator(Integer i) {
+                sleep();
+
+                final JButton button = new JButton();
+                SizeDecorator.create(button).size(W, H);
+                TextDecorator.create(button).text(BUTTON + i);
+
+                final ActionButton actionButton = actionListDecorator.get(i);
+                actionButton.run(button, i);
+
+                display
+                   .addComponentPanel(button)
+                   .validate();
+            }
+        }, DELAY);
+    }
+
+    private static void sleep() {
+        try {
+            Thread.sleep(MILLIS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
