@@ -31,6 +31,7 @@ Commander Pattern
 ```
 Text
 Size
+Foreground
 Action Listener on Click
 Bevel Border
 Compound Border
