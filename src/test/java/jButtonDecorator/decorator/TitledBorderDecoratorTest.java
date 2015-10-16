@@ -37,7 +37,7 @@ public class TitledBorderDecoratorTest {
     @Test
     public void testBorder() throws Exception {
         final String title = "Decorator pattern";
-        titledBorderDecorator.border(title);
+        titledBorderDecorator.set(title);
         assertEquals(((TitledBorder)button.getBorder()).getTitle(),title);
     }
 

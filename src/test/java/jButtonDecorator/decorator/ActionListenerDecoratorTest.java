@@ -40,8 +40,8 @@ public class ActionListenerDecoratorTest {
     public void testActionListener() throws Exception {
         final ActionListener listener = (event) -> {};
         final ActionListenerDecorator actionListenerDecoratorSpy = spy(actionlistenerDecorator);
-        actionListenerDecoratorSpy.actionListener(listener);
-        verify(actionListenerDecoratorSpy).actionListener(listener);
+        actionListenerDecoratorSpy.set(listener);
+        verify(actionListenerDecoratorSpy).set(listener);
     }
 
     private void createInstance() {

@@ -42,7 +42,7 @@ public class BevelBorderDecoratorTest {
         final Color upper = Color.GREEN;
         final Color lower = Color.CYAN;
 
-        bevelBorderDecorator.border(borderStyle, upper, lower);
+        bevelBorderDecorator.set(borderStyle, upper, lower);
         final BevelBorder bevel = new BevelBorder(borderStyle, upper, lower);
 
         assertEquals(button.getBorder().getClass(), bevel.getClass());

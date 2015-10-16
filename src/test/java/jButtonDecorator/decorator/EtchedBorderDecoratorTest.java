@@ -44,7 +44,7 @@ public class EtchedBorderDecoratorTest {
         final Color upper = Color.GREEN;
         final Color lower = Color.CYAN;
 
-        etchedBorderDecorator.border(borderStyle, upper, lower);
+        etchedBorderDecorator.set(borderStyle, upper, lower);
         final EtchedBorder etchedBorder = new EtchedBorder(borderStyle, upper, lower);
 
         final Border border = button.getBorder();

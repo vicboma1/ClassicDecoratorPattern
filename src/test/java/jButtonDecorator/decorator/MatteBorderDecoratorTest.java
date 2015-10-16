@@ -44,7 +44,7 @@ public class MatteBorderDecoratorTest {
         final int right = 6;
         final Color matteColor = new Color(174, 2, 126);
 
-        matteBorderDecorator.border(top, left, bottom, right, matteColor);
+        matteBorderDecorator.set(top, left, bottom, right, matteColor);
         final MatteBorder matte = new MatteBorder(top, left, bottom, right, matteColor);
 
         assertEquals(button.getBorder().getClass(), matte.getClass());

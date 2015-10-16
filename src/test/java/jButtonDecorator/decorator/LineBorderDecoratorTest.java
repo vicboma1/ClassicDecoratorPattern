@@ -42,7 +42,7 @@ public class LineBorderDecoratorTest {
         final int thickness = 4;
         final boolean isRounder = true;
 
-        lineBorderDecorator.border(color, thickness, isRounder);
+        lineBorderDecorator.set(color, thickness, isRounder);
         final LineBorder line = new LineBorder(color, thickness, isRounder);
 
         assertEquals(button.getBorder().getClass(), line.getClass());

@@ -6,16 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.swing.*;
+import java.awt.*;
 
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
 /**
- * Created by vicboma on 15/10/15.
+ * Created by vicboma on 17/10/15.
  */
-public class SizeDecoratorTest {
+public class ForegroundDecoratorTest {
 
-    private SizeDecorator sizeDecorator;
+    private ForegroundDecorator foregroundDecorator;
     private JButton button;
 
     @Before
@@ -25,27 +26,26 @@ public class SizeDecoratorTest {
 
     @After
     public void tearDown() throws Exception {
-        sizeDecorator = null;
+        foregroundDecorator = null;
     }
 
     @Test
     public void testCreate() throws Exception {
-        assertNotNull("Is null", sizeDecorator);
-        assertTrue("Not same", sizeDecorator.getClass() == SizeDecorator.class);
+        assertNotNull("Is null", foregroundDecorator);
+        assertTrue("Not same", foregroundDecorator.getClass() == ForegroundDecorator.class);
     }
 
     @Test
-    public void testSize() throws Exception {
-        final int h = 190;
-        final int w = 200;
-        sizeDecorator.set(w, h);
+    public void testForeground() throws Exception {
+        final Color orange = Color.orange;
+        foregroundDecorator.set(orange);
 
-        Assert.assertTrue((int) button.getPreferredSize().getHeight() == h);
-        Assert.assertTrue((int) button.getPreferredSize().getWidth() == w);
+        Assert.assertEquals(button.getForeground(), orange);
     }
 
     private void createInstance() {
         button = new JButton();
-        sizeDecorator = SizeDecorator.create(button);
+        foregroundDecorator = ForegroundDecorator.create(button);
     }
+
 }

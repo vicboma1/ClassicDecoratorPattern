@@ -43,7 +43,7 @@ public class SofBevelBorderDecoratorTest {
         final Color lower = Color.CYAN;
 
         final SoftBevelBorder softBevelBorder = new SoftBevelBorder(borderStyle, upper, lower);
-        sofBevelBorderDecorator.border(borderStyle, upper, lower);
+        sofBevelBorderDecorator.set(borderStyle, upper, lower);
 
         final SoftBevelBorder border = (SoftBevelBorder)button.getBorder();
         assertEquals(border.getClass(), SoftBevelBorder.class);

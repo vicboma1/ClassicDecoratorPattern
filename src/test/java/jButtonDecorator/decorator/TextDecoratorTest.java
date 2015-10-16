@@ -37,7 +37,7 @@ public class TextDecoratorTest {
     @Test
     public void testText() throws Exception {
         final String text = "Test Button";
-        textDecorator.text(text);
+        textDecorator.set(text);
 
         Assert.assertEquals(button.getText().toString(), text);
     }

@@ -44,7 +44,7 @@ public class CompoundBorderDecoratorTest {
         final Color lower = Color.CYAN;
         final BevelBorder bevel = new BevelBorder(borderStyle, upper, lower);
 
-        compoundBorderDecorator.border(bevel);
+        compoundBorderDecorator.set(bevel);
 
         assertEquals(button.getBorder().getClass(), CompoundBorder.class);
         assertEquals(((CompoundBorder)button.getBorder()).getInsideBorder(),bevel );
